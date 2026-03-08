@@ -87,50 +87,6 @@ Responsibilities include:
 
 ---
 
-## Project Structure
-
-
-student-management-app
-│
-├── model
-│ ├── Admin.java
-│ ├── Faculty.java
-│ ├── Department.java
-│ ├── Course.java
-│ ├── Semester.java
-│ ├── Subject.java
-│ ├── Student.java
-│ ├── Exam.java
-│ ├── Marks.java
-│ ├── Attendance.java
-│ └── Marksheet.java
-│
-├── service
-│
-├── repository
-│ ├── AdminRepository.java
-│ ├── StudentRepository.java
-│ ├── FacultyRepository.java
-│ ├── MarksRepository.java
-│ ├── AttendanceRepository.java
-│ └── files
-│ ├── admin.csv
-│ ├── faculty.csv
-│ ├── departments.csv
-│ ├── courses.csv
-│ ├── semesters.csv
-│ ├── subjects.csv
-│ ├── students.csv
-│ ├── exams.csv
-│ ├── marks.csv
-│ └── attendance.csv
-│
-└── main
-└── Main.java
-
-
----
-
 ## Data Storage
 
 The system stores all data in **CSV files instead of using a database**.
