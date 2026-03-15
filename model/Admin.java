@@ -1,23 +1,20 @@
+package model;
+
 public class Admin
 {
-    /* Instance variables */
     private String adminId;
     private String password;
 
-    /* Default Constructor */
     public Admin()
     {
-        this("", "");  
+        this("", "");
     }
 
-    /* Parameterized Constructor */
     public Admin(String adminId, String password)
     {
         this.adminId = adminId;
         this.password = password;
     }
-
-    /* Getter & Setter Methods */
 
     public String getAdminId()
     {

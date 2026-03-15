@@ -1,26 +1,32 @@
+package model;
+
 public class Semester
 {
     /* Instance Variables */
     private String semesterId;
-    private String deptId;
     private String courseId;
+    private int semesterNumber;
     private int numOfSubjects;
     private int numOfStudents;
+    private String status;
 
     /* Default Constructor */
     public Semester()
     {
-        this("", "", "", 0, 0);
+        this("", "", 0, 0, 0, "ACTIVE");
     }
 
     /* Parameterized Constructor */
-    public Semester(String semesterId, String deptId, String courseId, int numOfSubjects, int numOfStudents)
+    public Semester(String semesterId, String courseId,
+                    int semesterNumber, int numOfSubjects,
+                    int numOfStudents, String status)
     {
         this.semesterId = semesterId;
-        this.deptId = deptId;
         this.courseId = courseId;
+        this.semesterNumber = semesterNumber;
         this.numOfSubjects = numOfSubjects;
         this.numOfStudents = numOfStudents;
+        this.status = status;
     }
 
     /* Getter and Setter Methods */
@@ -35,16 +41,6 @@ public class Semester
         this.semesterId = semesterId;
     }
 
-    public String getDeptId()
-    {
-        return deptId;
-    }
-
-    public void setDeptId(String deptId)
-    {
-        this.deptId = deptId;
-    }
-
     public String getCourseId()
     {
         return courseId;
@@ -53,6 +49,16 @@ public class Semester
     public void setCourseId(String courseId)
     {
         this.courseId = courseId;
+    }
+
+    public int getSemesterNumber()
+    {
+        return semesterNumber;
+    }
+
+    public void setSemesterNumber(int semesterNumber)
+    {
+        this.semesterNumber = semesterNumber;
     }
 
     public int getNumOfSubjects()
@@ -73,5 +79,15 @@ public class Semester
     public void setNumOfStudents(int numOfStudents)
     {
         this.numOfStudents = numOfStudents;
+    }
+
+    public String getStatus()
+    {
+        return status;
+    }
+
+    public void setStatus(String status)
+    {
+        this.status = status;
     }
 }

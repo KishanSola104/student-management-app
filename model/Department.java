@@ -1,3 +1,5 @@
+package model;
+
 public class Department
 {
     /* Instance Variables */
@@ -6,24 +8,28 @@ public class Department
     private int numOfCourses;
     private int numOfStudents;
     private int numOfFaculties;
+    private String status;   // ACTIVE / INACTIVE (for soft delete)
 
     /* Default Constructor */
     public Department()
     {
-        this("", "", 0, 0, 0);
+        this("", "", 0, 0, 0, "ACTIVE");
     }
 
     /* Parameterized Constructor */
-    public Department(String deptId, String deptName, int numOfCourses, int numOfStudents, int numOfFaculties)
+    public Department(String deptId, String deptName,
+                      int numOfCourses, int numOfStudents,
+                      int numOfFaculties, String status)
     {
         this.deptId = deptId;
         this.deptName = deptName;
         this.numOfCourses = numOfCourses;
         this.numOfStudents = numOfStudents;
         this.numOfFaculties = numOfFaculties;
+        this.status = status;
     }
 
-    /* Getter and Setter Methods */
+    /* Getters and Setters */
 
     public String getDeptId()
     {
@@ -73,5 +79,15 @@ public class Department
     public void setNumOfFaculties(int numOfFaculties)
     {
         this.numOfFaculties = numOfFaculties;
+    }
+
+    public String getStatus()
+    {
+        return status;
+    }
+
+    public void setStatus(String status)
+    {
+        this.status = status;
     }
 }

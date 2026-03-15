@@ -1,29 +1,39 @@
+package model;
+
 public class Student
 {
+    /* Status Constants */
+    public static final String ACTIVE = "ACTIVE";
+    public static final String INACTIVE = "INACTIVE";
+
     /* Instance Variables */
     private String studentId;
     private String studentName;
     private String deptId;
     private String courseId;
-    private String semesterId;
+    private int semesterNumber;
+    private String status;
 
     /* Default Constructor */
     public Student()
     {
-        this("", "", "", "", "");
+        this("", "", "", "", 0, ACTIVE);
     }
 
     /* Parameterized Constructor */
-    public Student(String studentId, String studentName, String deptId, String courseId, String semesterId)
+    public Student(String studentId, String studentName,
+                   String deptId, String courseId,
+                   int semesterNumber, String status)
     {
         this.studentId = studentId;
         this.studentName = studentName;
         this.deptId = deptId;
         this.courseId = courseId;
-        this.semesterId = semesterId;
+        this.semesterNumber = semesterNumber;
+        this.status = status;
     }
 
-    /* Getter and Setter Methods */
+    /* Getters and Setters */
 
     public String getStudentId()
     {
@@ -65,13 +75,23 @@ public class Student
         this.courseId = courseId;
     }
 
-    public String getSemesterId()
+    public int getSemesterNumber()
     {
-        return semesterId;
+        return semesterNumber;
     }
 
-    public void setSemesterId(String semesterId)
+    public void setSemesterNumber(int semesterNumber)
     {
-        this.semesterId = semesterId;
+        this.semesterNumber = semesterNumber;
+    }
+
+    public String getStatus()
+    {
+        return status;
+    }
+
+    public void setStatus(String status)
+    {
+        this.status = status;
     }
 }

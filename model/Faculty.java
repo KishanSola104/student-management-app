@@ -1,29 +1,32 @@
+package model;
+
 public class Faculty
 {
-    /* Instance Variables */
+    public static final String ACTIVE = "ACTIVE";
+    public static final String INACTIVE = "INACTIVE";
+
     private String facultyId;
     private String facultyName;
-    private String facultyPassword;
+    private String password;
     private String deptId;
     private String courseId;
+    private String status;
 
-    /* Default Constructor */
     public Faculty()
     {
-        this("", "", "", "", "");
+        this("", "", "", "", "", ACTIVE);
     }
 
-    /* Parameterized Constructor */
-    public Faculty(String facultyId, String facultyName, String facultyPassword, String deptId, String courseId)
+    public Faculty(String facultyId, String facultyName, String password,
+                   String deptId, String courseId, String status)
     {
         this.facultyId = facultyId;
         this.facultyName = facultyName;
-        this.facultyPassword = facultyPassword;
+        this.password = password;
         this.deptId = deptId;
         this.courseId = courseId;
+        this.status = status;
     }
-
-    /* Getter and Setter Methods */
 
     public String getFacultyId()
     {
@@ -45,14 +48,14 @@ public class Faculty
         this.facultyName = facultyName;
     }
 
-    public String getFacultyPassword()
+    public String getPassword()
     {
-        return facultyPassword;
+        return password;
     }
 
-    public void setFacultyPassword(String facultyPassword)
+    public void setPassword(String password)
     {
-        this.facultyPassword = facultyPassword;
+        this.password = password;
     }
 
     public String getDeptId()
@@ -73,5 +76,15 @@ public class Faculty
     public void setCourseId(String courseId)
     {
         this.courseId = courseId;
+    }
+
+    public String getStatus()
+    {
+        return status;
+    }
+
+    public void setStatus(String status)
+    {
+        this.status = status;
     }
 }

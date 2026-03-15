@@ -1,22 +1,23 @@
+package model;
+
 public class Course
 {
-    /* Instance Variables */
     private String courseId;
     private String courseName;
     private String deptId;
     private int numOfStudents;
     private int numOfFaculties;
     private int numOfSemesters;
+    private String status;
 
-    /* Default Constructor */
     public Course()
     {
-        this("", "", "", 0, 0, 0);
+        this("", "", "", 0, 0, 0, "ACTIVE");
     }
 
-    /* Parameterized Constructor */
     public Course(String courseId, String courseName, String deptId,
-                  int numOfStudents, int numOfFaculties, int numOfSemesters)
+                  int numOfStudents, int numOfFaculties,
+                  int numOfSemesters, String status)
     {
         this.courseId = courseId;
         this.courseName = courseName;
@@ -24,67 +25,27 @@ public class Course
         this.numOfStudents = numOfStudents;
         this.numOfFaculties = numOfFaculties;
         this.numOfSemesters = numOfSemesters;
+        this.status = status;
     }
 
-    /* Getter and Setter Methods */
+    public String getCourseId() { return courseId; }
+    public void setCourseId(String courseId) { this.courseId = courseId; }
 
-    public String getCourseId()
-    {
-        return courseId;
-    }
+    public String getCourseName() { return courseName; }
+    public void setCourseName(String courseName) { this.courseName = courseName; }
 
-    public void setCourseId(String courseId)
-    {
-        this.courseId = courseId;
-    }
+    public String getDeptId() { return deptId; }
+    public void setDeptId(String deptId) { this.deptId = deptId; }
 
-    public String getCourseName()
-    {
-        return courseName;
-    }
+    public int getNumOfStudents() { return numOfStudents; }
+    public void setNumOfStudents(int numOfStudents) { this.numOfStudents = numOfStudents; }
 
-    public void setCourseName(String courseName)
-    {
-        this.courseName = courseName;
-    }
+    public int getNumOfFaculties() { return numOfFaculties; }
+    public void setNumOfFaculties(int numOfFaculties) { this.numOfFaculties = numOfFaculties; }
 
-    public String getDeptId()
-    {
-        return deptId;
-    }
+    public int getNumOfSemesters() { return numOfSemesters; }
+    public void setNumOfSemesters(int numOfSemesters) { this.numOfSemesters = numOfSemesters; }
 
-    public void setDeptId(String deptId)
-    {
-        this.deptId = deptId;
-    }
-
-    public int getNumOfStudents()
-    {
-        return numOfStudents;
-    }
-
-    public void setNumOfStudents(int numOfStudents)
-    {
-        this.numOfStudents = numOfStudents;
-    }
-
-    public int getNumOfFaculties()
-    {
-        return numOfFaculties;
-    }
-
-    public void setNumOfFaculties(int numOfFaculties)
-    {
-        this.numOfFaculties = numOfFaculties;
-    }
-
-    public int getNumOfSemesters()
-    {
-        return numOfSemesters;
-    }
-
-    public void setNumOfSemesters(int numOfSemesters)
-    {
-        this.numOfSemesters = numOfSemesters;
-    }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 }
